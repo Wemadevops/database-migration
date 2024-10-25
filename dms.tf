@@ -122,7 +122,6 @@ resource "aws_dms_replication_task" "test" {
   migration_type           = "full-load"
   replication_instance_arn = aws_dms_replication_instance.test.replication_instance_arn
   replication_task_id      = "dms-replication-task"
-  #replication_task_settings = "..."
   source_endpoint_arn = aws_dms_endpoint.source.endpoint_arn
   table_mappings      = "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"%\",\"table-name\":\"%\"},\"rule-action\":\"include\"}]}"
 
