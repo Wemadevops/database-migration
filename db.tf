@@ -3,7 +3,6 @@ resource "aws_db_instance" "oracle" {
   db_name        = "ORCL"
   identifier     = "sourcedb"
   instance_class = "db.t3.small"
-  #license_model          = "licence-included"
   allocated_storage         = 20
   publicly_accessible       = true
   username                  = var.db-username
